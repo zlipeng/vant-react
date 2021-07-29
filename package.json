@@ -1,0 +1,46 @@
+{
+  "name": "vant-react",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "classnames": "^2.3.1",
+    "css-loader": "^5.2.0",
+    "less": "^4.1.1",
+    "less-loader": "^7.3.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "style-loader": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@storybook/addon-actions": "^6.3.6",
+    "@storybook/addon-essentials": "^6.3.6",
+    "@storybook/addon-links": "^6.3.6",
+    "@storybook/react": "^6.3.6",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@vitejs/plugin-react-refresh": "^1.3.1",
+    "babel-loader": "^8.2.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "typescript": "^4.3.2",
+    "vite": "^2.4.4"
+  },
+  "homepage": "https://github.com/zlipeng/vant-react",
+  "prettier": {
+    "printWidth": 120,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
