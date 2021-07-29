@@ -12,8 +12,16 @@
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react"
+    "noEmit": false,
+    "jsx": "react",
+    "declaration": true,
+    "declarationDir": "@types",
+    "emitDeclarationOnly": true,
+    "baseUrl": ".",
+    "paths": {
+      "@": ["./src"],
+      "@/*": ["./src/*"],
+    }
   },
   "include": ["./src"]
 }

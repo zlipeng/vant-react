@@ -32,6 +32,11 @@
     "vite": "^2.4.4"
   },
   "homepage": "https://github.com/zlipeng/vant-react",
+  "license": "MIT",
+  "description": "vant react",
+  "typings": "@types/index.d.ts",
+  "main": "dist/vant-react.umd.js",
+  "module": "dist/vant-react.es.js",
   "prettier": {
     "printWidth": 120,
     "semi": true,

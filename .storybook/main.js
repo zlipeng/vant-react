@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   "stories": [
     "../src/**/*.stories.mdx",
@@ -30,6 +32,9 @@ module.exports = {
       ],
       include: path.resolve(__dirname, '../'),
     });
+    config.resolve.alias = {
+      '@': path.resolve(__dirname, '../src')
+    }
 
     // Return the altered config
     return config;

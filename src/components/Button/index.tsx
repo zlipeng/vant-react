@@ -1,7 +1,13 @@
 import React from 'react'
+import './index.less'
+import { createNamespace } from '@/utils/create'
 
-export default function Button() {
+const [name, bem] = createNamespace('vant-button')
+
+interface ButtonProps {}
+
+export default function Button(props: ButtonProps) {
   return (
-    <button>Button</button>
+    <button className={name}>Button</button>
   )
 }
