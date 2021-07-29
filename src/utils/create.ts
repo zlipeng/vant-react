@@ -1,6 +1,6 @@
 import { createBEM } from "./bem";
 
-const prefix = 'vant';
+const prefix = 'van';
 
 export function createNamespace(name: string) {
   const prefixedName = `${prefix}-${name}`;

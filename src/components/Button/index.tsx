@@ -2,7 +2,7 @@ import React from 'react'
 import './index.less'
 import { createNamespace } from '@/utils/create'
 
-const [name, bem] = createNamespace('vant-button')
+const [name, bem] = createNamespace('button')
 
 interface ButtonProps {}
 
