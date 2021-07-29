@@ -28,7 +28,9 @@ export default function Button(props: ButtonProps) {
     loadingSize,
     loadingType,
     icon,
-    iconPrefix
+    iconPrefix,
+    url,
+    replace
   } = props;
 
   const Tag: any = tag || 'button'
@@ -81,9 +83,19 @@ export default function Button(props: ButtonProps) {
     return null
   }
 
+  const onClick = (e: MouseEvent) => {
+    if (loading) {
+      e.preventDefault()
+      return
+    }
+    if (url) {
+      replace ? location.replace(url) : location.href = url
+    }
+  }
+
   const classes = classNames(bem([type, size, { plain, block, round, square, loading, disabled, hairline }]), { [BORDER_SURROUND]: hairline });
   return (
-    <Tag className={classes} style={getStyle()}>
+    <Tag className={classes} style={getStyle()} onClick={onClick}>
       <div className={classNames(bem('content'))}>
         {iconPosition === 'left' && renderIcon()}
         {renderText()}

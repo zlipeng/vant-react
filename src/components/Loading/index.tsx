@@ -3,6 +3,7 @@ import classNames from 'classnames'
 import { LoadingProps } from './types'
 import { createNamespace } from '@/utils/create'
 import './index.less'
+import { getSizeStyle } from '@/utils/format/unit'
 
 const [name, bem] = createNamespace('loading')
 
@@ -17,13 +18,12 @@ const CircularIcon = (
 );
 
 export default function Loading(props: LoadingProps) {
-  const { children, color, type = 'circular', size = '30px', textSize = '14px', textColor, vertical = false, style, className } = props
+  const { children, color, type = 'circular', size, textSize = '14px', textColor, vertical = false, style, className } = props
 
   const loadingStyle = useMemo(() => {
     return {
       color,
-      width: size,
-      height: size
+      ...getSizeStyle(size)
     }
   }, [color, size])
 
